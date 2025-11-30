@@ -1,0 +1,81 @@
+<header>
+        <div class="profile-image-container">
+            <img src="placeholder-image.jpg" alt="תמונת פרופיל של שירי אלקבת" class="profile-image">
+        </div>
+        
+        <h1>שירי אלקבת</h1>
+        
+        <p class="subtitle">🎶 סטודיו צלילים מחברים 🎵</p>
+    </header>
+
+    <div class="tabs-container">
+        <div class="tabs-image-bar">
+            <a href="#" class="tab-link active" onclick="openTab(event, 'Studio')">
+                <img src="tab-studio.jpg" alt="סטודיו צלילים מחברים" class="tab-image">
+                <span class="tab-label">סטודיו צלילים מחברים</span>
+            </a>
+            <a href="#" class="tab-link" onclick="openTab(event, 'Performances')">
+                <img src="tab-performances.jpg" alt="הופעות" class="tab-image">
+                <span class="tab-label">הופעות</span>
+            </a>
+            <a href="#" class="tab-link" onclick="openTab(event, 'Workshops')">
+                <img src="tab-workshops.jpg" alt="סדנאות" class="tab-image">
+                <span class="tab-label">סדנאות</span>
+            </a>
+            <a href="#" class="tab-link" onclick="openTab(event, 'Groups')">
+                <img src="tab-groups.jpg" alt="קבוצות" class="tab-image">
+                <span class="tab-label">קבוצות</span>
+            </a>
+            <a href="#" class="tab-link" onclick="openTab(event, 'Therapy')">
+                <img src="tab-therapy.jpg" alt="תרפיה במוזיקה" class="tab-image">
+                <span class="tab-label">תרפיה במוזיקה</span>
+            </a>
+            <a href="#" class="tab-link" onclick="openTab(event, 'BodyVoice')">
+                <img src="tab-body-voice.jpg" alt="קול הגוף" class="tab-image">
+                <span class="tab-label">קול הגוף</span>
+            </a>
+            <a href="#" class="tab-link" onclick="openTab(event, 'Music')">
+                <img src="tab-music.jpg" alt="מוזיקה" class="tab-image">
+                <span class="tab-label">מוזיקה</span>
+            </a>
+        </div>
+
+        <div id="Studio" class="tab-content">
+            <h2>סטודיו צלילים מחברים</h2>
+            <p>[מלא כאן תוכן על הסטודיו והחזון הכללי.]</p>
+        </div>
+
+        <div id="Performances" class="tab-content" style="display:none">
+            <h2>הופעות</h2>
+            <p>[מלא כאן פרטים על הופעות, תאריכים ולינקים לכרטיסים.]</p>
+        </div>
+        
+        <div id="Workshops" class="tab-content" style="display:none">
+            <h2>סדנאות</h2>
+            <p>[מלא כאן תוכן על הסדנאות השונות המוצעות, לדוגמה: סדנת צליל, מדיטציה מודרכת.]</p>
+        </div>
+        
+        <div id="Groups" class="tab-content" style="display:none">
+            <h2>קבוצות</h2>
+            <p>[מלא כאן פרטים על קבוצות טיפול או קבוצות העשרה קבועות.]</p>
+        </div>
+
+        <div id="Therapy" class="tab-content" style="display:none">
+            <h2>תרפיה במוזיקה</h2>
+            <p>[מלא כאן הסבר מפורט על הטיפול במוזיקה ואיך הוא מתבצע.]</p>
+        </div>
+
+        <div id="BodyVoice" class="tab-content" style="display:none">
+            <h2>קול הגוף</h2>
+            <p>[מלא כאן תוכן על שימוש בקול ככלי טיפולי, שיעורי פיתוח קול או חיבור קול-גוף.]</p>
+        </div>
+
+        <div id="Music" class="tab-content" style="display:none">
+            <h2>מוזיקה</h2>
+            <p>[מלא כאן לינקים למוזיקה שלך, אלבומים, Spotify, YouTube.]</p>
+        </div>
+    </div>
+    
+    <script>
+        function openTab(evt, tabName) {
+            var tabcontent =
