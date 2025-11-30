@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>שירי אלקבץ - סטודיו צלילים מחברים</title>
+    <title>שירי אלקבץ - מוזיקאית יוצרת ותרפיסטית</title>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* 1. הגדרות בסיס וצבעים (פלטת לבנדר, חול וזהב) */
+        /* 1. הגדרות בסיס וצבעים (לבנדר, חול וזהב) */
         :root {
-            --color-primary-bg: #A8A3D8; /* סגול לבנדר רך - רקע כללי לבקשתך */
+            --color-primary-bg: #A8A3D8; /* סגול לבנדר רך - רקע כללי (BODY) */
             --color-secondary-bg: #F5F5DC; /* חום חול בהיר - רקע לבלוקים ותוכן */
-            --color-text-dark: #354F52; /* כהה לקריאות טובה */
-            --color-accent-soft: #C7BCA1; /* חום אבן/בז' כהה - הדגשה קלה/כותרות משנה */
-            --color-accent-deep: #846B3C; /* זהב מט/חום עמוק - כותרות, CTA, הדגשת טאב פעיל */
+            --color-text-dark: #354F52; 
+            --color-accent-soft: #C7BCA1; /* חום אבן/בז' כהה */
+            --color-accent-deep: #846B3C; /* זהב מט/חום עמוק */
         }
         
         * {
@@ -23,7 +23,7 @@
         }
         
         body {
-            background-color: var(--color-primary-bg); /* סגול לבנדר רך */
+            background-color: var(--color-primary-bg); 
             color: var(--color-text-dark);
             font-family: 'Heebo', sans-serif;
             line-height: 1.6;
@@ -37,21 +37,20 @@
             padding: 40px 0 20px 0;
             margin-bottom: 20px;
             
-            /* הגדרות רקע התמונה החדשות */
-            background-image: url('images/background.jpg'); /* נתיב התמונה החדש */
+            background-image: url('images/background.jpg'); 
             background-size: cover;
             background-position: center;
-            background-color: #A8A3D899; /* צבע לבנדר עם שקיפות למקרה שהתמונה לא נטענת */
+            background-color: #A8A3D899; 
             
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            color: white; /* שינוי צבע הטקסט ללבן לניגודיות על רקע כהה/תמונה */
+            color: white; 
         }
         
         header h1 {
             font-size: 3.5rem; 
-            color: white; /* שינוי ללבן */
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* צל קל לשיפור הקריאות */
+            color: white; 
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
             margin-bottom: 0; 
         }
         
@@ -65,32 +64,58 @@
             height: 150px;
             object-fit: cover;
             border-radius: 50%; 
-            border: 5px solid white; /* מסגרת לבנה בולטת */
+            border: 5px solid white; 
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            content: url('images/profile.jpg'); 
         }
 
-        /* 3. תיבת תוכן כללי קבועה (General Content) */
-        .general-intro-box {
+        /* 3. תיבת תוכן "מי אני" (שתי עמודות, קבוע בדף) */
+        .about-me-box {
             max-width: 900px;
             margin: 0 auto 30px auto; 
             padding: 30px;
-            background-color: var(--color-secondary-bg); /* חום חול בהיר */
+            background-color: var(--color-secondary-bg); 
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            text-align: center; 
+            
+            display: flex;
+            flex-direction: row-reverse; 
+            gap: 30px;
+            align-items: center;
         }
 
-        .general-intro-box h2 {
-            color: var(--color-accent-deep); /* זהב מט */
-            margin-bottom: 15px;
-            font-size: 1.8rem;
+        .about-me-image-container {
+            flex-shrink: 0; 
+            width: 250px;
         }
-        
-        /* 4. מערכת הלשוניות (Tabs) - תמונות */
+
+        .about-me-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 3px solid var(--color-accent-soft); 
+            /* נתיב תמונה לסקשן מי אני מעודכן */
+            content: url('images/aboutme1.jpg'); 
+        }
+
+        .about-me-text {
+            flex-grow: 1;
+        }
+
+        .about-me-text h2 {
+            color: var(--color-accent-deep); 
+            font-size: 2rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid rgba(132, 107, 60, 0.3); 
+            padding-bottom: 5px;
+        }
+
+        /* 4. מערכת הלשוניות (Tabs) */
         .tabs-container {
             max-width: 900px;
             margin: 0 auto;
-            background-color: var(--color-secondary-bg); /* רקע חול בהיר */
+            background-color: var(--color-secondary-bg); 
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -102,7 +127,7 @@
             flex-wrap: wrap; 
             padding: 10px;
             gap: 10px; 
-            background-color: var(--color-accent-soft); /* רקע חום אבן לבר הטאבים */
+            background-color: var(--color-accent-soft); 
         }
         
         .tab-link {
@@ -118,9 +143,9 @@
         }
         
         .tab-link.active {
-            box-shadow: 0 0 0 3px var(--color-accent-deep); /* מסגרת זהב מט לטאב הפעיל */
+            box-shadow: 0 0 0 3px var(--color-accent-deep); 
             border-radius: 8px;
-            background-color: var(--color-secondary-bg); /* רקע חול בהיר לטאב הפעיל */
+            background-color: var(--color-secondary-bg); 
         }
         
         .tab-image {
@@ -143,14 +168,15 @@
         }
         
         .tab-link.active .tab-label {
-            color: var(--color-accent-deep); /* הדגשת הטקסט בזהב מט */
+            color: var(--color-accent-deep); 
         }
 
-        /* 5. תוכן הלשונית (נפתח רק בלחיצה) */
+        /* 5. תוכן הלשונית והעיצוב המלא */
         .tab-content {
             padding: 30px;
             border-top: none;
-            background-color: var(--color-secondary-bg); /* רקע חול בהיר */
+            background-color: var(--color-secondary-bg); 
+            text-align: center; /* כדי לרכז תמונות וכפתורים בתוך הטאב */
         }
         
         .tab-content h2 {
@@ -159,8 +185,17 @@
             border-bottom: 2px solid rgba(132, 107, 60, 0.3); 
             padding-bottom: 10px;
         }
+
+        /* עיצוב תמונה מלאה בתוך טאב */
+        .full-tab-design {
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0 auto 20px auto; /* מרכוז ורווח מתחת לכפתור */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
         
-        /* 6. כפתור קריאה לפעולה (CTA) */
         .cta-button {
             display: inline-block;
             background-color: var(--color-accent-deep); 
@@ -174,10 +209,20 @@
         }
         
         .cta-button:hover {
-            background-color: var(--color-accent-soft); /* חום אבן במעבר עכבר */
+            background-color: var(--color-accent-soft); 
         }
-
-        /* 7. רספונסיביות לנייד */
+        
+        /* 6. רספונסיביות */
+        @media (max-width: 700px) {
+            .about-me-box {
+                flex-direction: column; 
+                text-align: center;
+            }
+            .about-me-image-container {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
         @media (max-width: 600px) {
             .tabs-image-bar {
                 justify-content: space-around;
@@ -203,111 +248,14 @@
         <h1>שירי אלקבץ</h1> 
     </header>
 
-    <div class="general-intro-box">
-        <h2>🎶 סטודיו צלילים מחברים 🎵</h2>
-        <p>ברוכים הבאים לסטודיו של שירי אלקבץ! אנו מאמינים בכוח הטרנספורמטיבי של המוזיקה והצליל כמקור לריפוי, יצירתיות וחיבור פנימי. כאן תוכלו למצוא את כל המידע על השירותים השונים שאני מציעה.</p>
-        <a href="#Contact" class="cta-button">לתיאום פגישת הכרות</a>
-    </div>
-
-    <div class="tabs-container">
-        
-        <div class="tabs-image-bar">
-            <a href="#" class="tab-link" onclick="openTab(event, 'Studio')">
-                <img src="images/studio.jpg" alt="סטודיו צלילים מחברים" class="tab-image">
-                <span class="tab-label">סטודיו צלילים מחברים</span>
-            </a>
-            <a href="#" class="tab-link" onclick="openTab(event, 'Performances')">
-                <img src="images/concerts.jpg" alt="הופעות" class="tab-image">
-                <span class="tab-label">הופעות</span>
-            </a>
-            <a href="#" class="tab-link" onclick="openTab(event, 'Workshops')">
-                <img src="images/sadna.jpg" alt="סדנאות" class="tab-image">
-                <span class="tab-label">סדנאות</span>
-            </a>
-            <a href="#" class="tab-link" onclick="openTab(event, 'Groups')">
-                <img src="images/groups.jpg" alt="קבוצות" class="tab-image">
-                <span class="tab-label">קבוצות</span>
-            </a>
-            <a href="#" class="tab-link" onclick="openTab(event, 'Therapy')">
-                <img src="images/teraphy.jpg" alt="תרפיה במוזיקה" class="tab-image">
-                <span class="tab-label">תרפיה במוזיקה</span>
-            </a>
-            <a href="#" class="tab-link" onclick="openTab(event, 'BodyVoice')">
-                <img src="images/kol_haguf.jpg" alt="קול הגוף" class="tab-image">
-                <span class="tab-label">קול הגוף</span>
-            </a>
-            <a href="#" class="tab-link" onclick="openTab(event, 'Music')">
-                <img src="images/music.jpg" alt="מוזיקה" class="tab-image">
-                <span class="tab-label">מוזיקה</span>
-            </a>
+    <div class="about-me-box">
+        <div class="about-me-image-container">
+            <img src="images/aboutme1.jpg" alt="תמונה נוספת של שירי אלקבץ" class="about-me-image">
         </div>
-
-        <div id="Studio" class="tab-content" style="display:none">
-            <h2>מידע נוסף על סטודיו צלילים מחברים</h2>
-            <p><strong>[כאן ניתן להוסיף תוכן ממוקד ופחות כללי על הסטודיו, כיוון שהכללי עבר למעלה.]</strong></p>
-        </div>
-
-        <div id="Performances" class="tab-content" style="display:none">
-            <h2>הופעות</h2>
-            <p><strong>[כאן מלא פרטים על הופעות, תאריכים ולינקים לרכישת כרטיסים.]</strong></p>
-            <a href="https://example.com/tickets" target="_blank" class="cta-button">רכישת כרטיסים</a>
-        </div>
-        
-        <div id="Workshops" class="tab-content" style="display:none">
-            <h2>סדנאות</h2>
-            <p><strong>[כאן מלא תוכן על הסדנאות השונות המוצעות.]</strong></p>
-            <ul>
-                <li>סדנת יסודות הצליל המרפא</li>
-                <li>שחרור רגשי דרך שירה וקול</li>
-            </ul>
-        </div>
-        
-        <div id="Groups" class="tab-content" style="display:none">
-            <h2>קבוצות</h2>
-            <p><strong>[כאן מלא פרטים על קבוצות טיפול או קבוצות העשרה קבועות.]</strong></p>
-        </div>
-
-        <div id="Therapy" class="tab-content" style="display:none">
-            <h2>תרפיה במוזיקה</h2>
-            <p><strong>[כאן מלא הסבר מפורט על הטיפול במוזיקה ואיך הוא מתבצע.]</strong></p>
-            <a href="mailto:your_email@example.com" class="cta-button">קבעו פגישת ייעוץ</a>
-        </div>
-
-        <div id="BodyVoice" class="tab-content" style="display:none">
-            <h2>קול הגוף</h2>
-            <p><strong>[כאן מלא תוכן על שימוש בקול ככלי טיפולי, שיעורי פיתוח קול או חיבור קול-גוף.]</strong></p>
-        </div>
-
-        <div id="Music" class="tab-content" style="display:none">
-            <h2>מוזיקה</h2>
-            <p><strong>[כאן מלא לינקים למוזיקה שלך, אלבומים, Spotify, YouTube.]</strong></p>
-            <a href="https://example.com/spotify" target="_blank" class="cta-button">ל-Spotify</a>
+        <div class="about-me-text">
+            <h2>מי אני</h2>
+            <p>אני **שירי אלקבץ**, מוזיקאית יוצרת ותרפיסטית במוזיקה. זה המקום לעוד טקסט על עצמך, על הגישה שלך ועל מה שמניע אותך ליצור ולטפל.</p>
         </div>
     </div>
-    
-    <footer>
-        <p>&copy; 2025 שירי אלקבץ | כל הזכויות שמורות.</p>
-    </footer>
 
-    <script>
-        function openTab(evt, tabName) {
-            // הסתר את כל התוכן
-            var tabcontent = document.getElementsByClassName("tab-content");
-            for (var i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            // הסר את סימון ה-'active' מכל הקישורים
-            var tablinks = document.getElementsByClassName("tab-link");
-            for (var i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            // הצג את הלשונית הנוכחית והדגש את הקישור הפעיל
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-        
-        /* אין הפעלה אוטומטית, התוכן הכללי נשאר גלוי */
-    </script>
-
-</body>
-</html>
+    <div
